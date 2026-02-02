@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Ann 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcome-screen">
+        <div class="welcome-container">
+            <div class="welcome-hearts">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+            <h1 class="welcome-title">For My Ann 💖</h1>
+            <p class="welcome-message">Welcome to this special website I made just for you, bebe 💕</p>
+            <div class="welcome-animation">
+                <div class="floating-heart"></div>
+                <div class="floating-heart"></div>
+                <div class="floating-heart"></div>
+            </div>
+            <button class="start-btn" id="start-btn">
+                <i class="fas fa-play-circle"></i> Get Started
+            </button>
+            <div class="welcome-footer">
+                <p>Made with <i class="fas fa-heart"></i> for the most amazing girl</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proposal Screen (Hidden Initially) -->
+    <div class="proposal-screen" id="proposal-screen" style="display: none;">
+        <div class="container">
+            <header>
+                <h1 class="title">My Dearest Ann</h1>
+                <div class="heart-divider">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </header>
+
+            <section class="photo-section">
+                <div class="photo-frame">
+                    <div class="photo-placeholder" id="photo-container">
+                        <img src="pic 3.jpg" alt="Our Special Picture" class="fixed-photo">
+                    </div>
+                    <div class="photo-caption">
+                        <p>Every moment with you is special</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="proposal-section">
+                <div class="proposal-content">
+                    <div class="pre-message">
+                        <h2><i class="fas fa-heart"></i> An Invitation Letter</h2>
+                        <p>Dear Ann,</p>
+                        <p>Hello, bebe. I know you've been busy with your acads and personal life, and I respect that. That’s why I’d love to invite you on February 14 to pause for a while, enjoy each other's company, and celebrate Valentine's together.</p>
+                        <p>I just want you to know that I'm always proud of you.</p>                       
+                        <p>Your bebe, <br>Lorence (IT na gymrat) </p>
+                    </div>
+                    
+                    <h2 class="question">Will you be my Valentine date?</h2>
+                    <p class="sub-question">Make this Valentine's Day the most special one</p>
+                    
+                    <div class="response-buttons">
+                        <button class="btn yes-btn" id="yes-btn">
+                            <i class="fas fa-heart"></i> YES! I'd love to!
+                        </button>
+                        <button class="btn no-btn" id="no-btn">
+                            <i class="fas fa-times"></i> No, I'm sorry
+                        </button>
+                    </div>
+                    
+                    <div class="heart-animation">
+                        <div class="heart"></div>
+                        <div class="heart"></div>
+                        <div class="heart"></div>
+                        <div class="heart"></div>
+                        <div class="heart"></div>
+                    </div>
+                    
+                    <div class="no-message" id="no-message" style="display: none;">
+                        <p class="funny-message">Wala yan sa choices, eto talaga yon</p>
+                        <button class="try-again-btn" id="try-again-btn">
+                            <i class="fas fa-heart"></i> Yes na yes
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>Made with <i class="fas fa-heart"></i> for Ann, the most amazing person in my life</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Password Mystery Screen (Hidden Initially) -->
+    <div class="password-screen" id="password-screen" style="display: none;">
+        <div class="mystery-container">
+            <div class="mystery-header">
+                <h1><i class="fas fa-lock"></i> The Special Letter</h1>
+                <p class="mystery-subtitle">A special surprise awaits...</p>
+            </div>
+            
+            <div class="mystery-content">
+                <div class="mystery-box">
+                    <div class="envelope">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    
+                    <h2>The Password Will Be Revealed...</h2>
+                    <p class="mystery-instruction">On February 14, meet Lorence</p>
+                    
+                    <div class="password-input-container">
+                        <input type="password" id="mystery-password" placeholder="Enter the secret password...">
+                        <button id="reveal-password-btn" class="eye-btn">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    
+                    <button id="submit-password-btn" class="submit-btn">
+                        <i class="fas fa-key"></i> Unlock the Surprise
+                    </button>
+                    
+                    <div class="attempt-message" id="attempt-message"></div>
+                    
+                    <div class="hint-box">
+                        <p class="hint"><i class="fas fa-lightbulb"></i> Hint: Secret walang clue</p>
+                    </div>
+                </div>
+                
+                <div class="surprise-content" id="surprise-content" style="display: none;">
+                    <div class="love-letter-final">
+                        <div class="letter-header-final">
+                            <h2><i class="fas fa-heart"></i> My Final Love Letter to You <i class="fas fa-heart"></i></h2>
+                        </div>
+                        <div class="letter-content-final">
+                            <p class="letter-date-final">February 14, 2024</p>
+                            <div class="letter-text-final" id="letter-text-final">
+                                <!-- Code Where I can write my letter -->
+                                <span class="signature-final">Your Valentine 💖</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-surprise">
+                        <div class="surprise-heart">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Your Final Surprise Awaits...</h3>
+                        <p>I have something special planned for our date on February 14th! Can't wait to see you.</p>
+                        <div class="countdown" id="countdown">
+                            <p>Counting down to our Valentine's date:</p>
+                            <div class="countdown-timer">
+                                <span id="days">0</span> days
+                                <span id="hours">0</span> hours
+                                <span id="minutes">0</span> minutes
+                                <span id="seconds">0</span> seconds
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mystery-footer">
+                <p>This letter was created with love for Ann 💕</p>
+                <button id="back-to-proposal-btn" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Proposal
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
