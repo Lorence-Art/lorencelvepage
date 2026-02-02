@@ -3,9 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const welcomeScreen = document.getElementById('welcome-screen');
     const proposalScreen = document.getElementById('proposal-screen');
     const passwordScreen = document.getElementById('password-screen');
+    const thankYouModal = document.getElementById('thank-you-modal');
     const startBtn = document.getElementById('start-btn');
     const yesBtn = document.getElementById('yes-btn');
     const noBtn = document.getElementById('no-btn');
+    const continueBtn = document.getElementById('continue-btn');
     const noMessage = document.getElementById('no-message');
     const tryAgainBtn = document.getElementById('try-again-btn');
     const mysteryPassword = document.getElementById('mystery-password');
@@ -22,15 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const maxNoClicks = 4;
     const correctPassword = "dasdsah1332455353"; 
     
-    // Array of messages for each click on "No" button
-    const noButtonMessages = [
+       const noButtonMessages = [
         "Sure na ba yan bebe?",
         "Sige na minsan lang to oh😞",
         "Wait lang😔",
         "System: Removing the button this button 😤"
     ];
     
-    // Initialize Countdown to Valentine's Day
+    // Initialize Countdown to Valentine Day
     initializeCountdown();
     
     // Start Button - Welcome to Proposal
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 800);
     });
     
-    // YES Button - Go to Password Mystery
+    // YES Button - Show Thank You Modal
     yesBtn.addEventListener('click', function() {
         // Create confetti celebration
         createConfetti();
@@ -62,12 +63,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // Play happy sound
         playSound('happy');
         
-        // Animate transition to password screen
+        // Animate exit of proposal screen
         proposalScreen.style.opacity = '0';
         proposalScreen.style.transform = 'translateY(-20px)';
         
         setTimeout(() => {
             proposalScreen.style.display = 'none';
+            thankYouModal.style.display = 'flex';
+            
+            // Animate entrance of thank you modal
+            thankYouModal.style.opacity = '0';
+            setTimeout(() => {
+                thankYouModal.style.transition = 'opacity 0.8s ease';
+                thankYouModal.style.opacity = '1';
+            }, 50);
+        }, 800);
+    });
+    
+    // Continue Button - Go to Password Mystery
+    continueBtn.addEventListener('click', function() {
+        // Animate exit of thank you modal
+        thankYouModal.style.opacity = '0';
+        
+        setTimeout(() => {
+            thankYouModal.style.display = 'none';
             passwordScreen.style.display = 'block';
             
             // Animate entrance of password screen
@@ -103,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     noMessage.style.display = 'block';
                     
                     // Animate the funny message
-                    noMessage.style.animation = 'fadeIn 3s ease';
+                    noMessage.style.animation = 'fadeIn 0.5s ease';
                     
                     // Also show the "Try again" button
                     tryAgainBtn.style.display = 'flex';

@@ -20,7 +20,7 @@
                 <i class="fas fa-heart"></i>
             </div>
             <h1 class="welcome-title">For My Ann 💖</h1>
-            <p class="welcome-message">Welcome to this special website I made just for you, bebe 💕</p>
+            <p class="welcome-message">Welcome to a special place made just for you</p>
             <div class="welcome-animation">
                 <div class="floating-heart"></div>
                 <div class="floating-heart"></div>
@@ -63,7 +63,7 @@
                     <div class="pre-message">
                         <h2><i class="fas fa-heart"></i> An Invitation Letter</h2>
                         <p>Dear Ann,</p>
-                        <p>Hello, bebe. I know you've been busy with your acads and personal life, and I respect that. That’s why I’d love to invite you on February 14 to pause for a while, enjoy each other's company, and celebrate Valentine's together.</p>
+                        <p>Hello, bebe. I know you've been busy with your acads and personal life, and I respect that. That's why I want to invite you on this day to pause for a while, enjoy each other's company, and celebrate Valentine's together.</p>
                         <p>I just want you to know that I'm always proud of you.</p>                       
                         <p>Your bebe, <br>Lorence (IT na gymrat) </p>
                     </div>
@@ -89,7 +89,7 @@
                     </div>
                     
                     <div class="no-message" id="no-message" style="display: none;">
-                        <p class="funny-message">Wala yan sa choices, eto talaga yon</p>
+                        <p class="funny-message">Mali yung choice nato, eto talaga yon</p>
                         <button class="try-again-btn" id="try-again-btn">
                             <i class="fas fa-heart"></i> Yes na yes
                         </button>
@@ -103,11 +103,47 @@
         </div>
     </div>
 
+    <!-- Thank You Modal (Hidden Initially) -->
+    <div class="thank-you-modal" id="thank-you-modal" style="display: none;">
+        <div class="thank-you-container">
+            <div class="thank-you-header">
+                <i class="fas fa-heart-circle-check"></i>
+                <h1>Love Yaa!</h1>
+            </div>
+            
+            <div class="thank-you-content">
+                <div class="thank-you-animation">
+                    <i class="fas fa-heart thank-you-heart"></i>
+                    <i class="fas fa-heart thank-you-heart"></i>
+                    <i class="fas fa-heart thank-you-heart"></i>
+                </div>
+                
+                <div class="thank-you-message">
+                    <p>See you bebe</p>
+                    <p>I love you!💖</p>
+                </div>
+                
+                <div class="thank-you-surprise">
+                    <i class="fas fa-gift"></i>
+                    <p></p>
+                </div>
+                
+                <button class="continue-btn" id="continue-btn">
+                    <i class="fas fa-arrow-right"></i> Continue to the Special Letter
+                </button>
+                
+                <div class="thank-you-note">
+                    <p><i class="fas fa-heart"></i> Can't wait to see you on February 14th! <i class="fas fa-heart"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Password Mystery Screen (Hidden Initially) -->
     <div class="password-screen" id="password-screen" style="display: none;">
         <div class="mystery-container">
             <div class="mystery-header">
-                <h1><i class="fas fa-lock"></i> The Special Letter</h1>
+                <h1><i class="fas fa-lock"></i> The Mystery Letter</h1>
                 <p class="mystery-subtitle">A special surprise awaits...</p>
             </div>
             
@@ -146,7 +182,8 @@
                         <div class="letter-content-final">
                             <p class="letter-date-final">February 14, 2024</p>
                             <div class="letter-text-final" id="letter-text-final">
-                                <!-- Code Where I can write my letter -->
+                                Ann, from the moment I met you, my world changed in the most beautiful way. Your smile, your laughter, your kind heart - everything about you makes my days brighter.
+                                
                                 <span class="signature-final">Your Valentine 💖</span>
                             </div>
                         </div>
@@ -172,7 +209,7 @@
             </div>
             
             <div class="mystery-footer">
-                <p>This letter was created with love for Ann 💕</p>
+                <p>This mystery was created with love for Ann 💕</p>
                 <button id="back-to-proposal-btn" class="back-btn">
                     <i class="fas fa-arrow-left"></i> Back to Proposal
                 </button>
